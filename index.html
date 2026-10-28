@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marsh | Consultora Ambiental y Territorial</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind Config for Custom Colors/Fonts -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#e2e8f0', // slate-200
+                            DEFAULT: '#0f766e', // teal-700
+                            dark: '#0f172a', // slate-900
+                            accent: '#10b981', // emerald-500
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles for extra polish */
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .hero-pattern {
+            background-image: radial-gradient(circle at center, rgba(255,255,255,0.05) 0%, transparent 100%);
+            background-size: 100% 100%;
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans selection:bg-brand-DEFAULT selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-slate-200" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-2xl font-bold text-brand-dark tracking-tighter">
+                        MARSH<span class="text-brand-DEFAULT">.</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#inicio" class="text-sm font-medium text-slate-600 hover:text-brand-DEFAULT transition-colors">Inicio</a>
+                    <a href="#nosotros" class="text-sm font-medium text-slate-600 hover:text-brand-DEFAULT transition-colors">Nosotros</a>
+                    <a href="#servicios" class="text-sm font-medium text-slate-600 hover:text-brand-DEFAULT transition-colors">Servicios</a>
+                    <a href="#equipo" class="text-sm font-medium text-slate-600 hover:text-brand-DEFAULT transition-colors">Equipo</a>
+                    <a href="#contacto" class="text-sm font-medium bg-brand-dark text-white px-5 py-2.5 rounded-full hover:bg-brand-DEFAULT transition-all shadow-sm hover:shadow-md">
+                        Contáctanos
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-brand-dark focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#inicio" class="block px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-DEFAULT rounded-lg">Inicio</a>
+                <a href="#nosotros" class="block px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-DEFAULT rounded-lg">Nosotros</a>
+                <a href="#servicios" class="block px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-DEFAULT rounded-lg">Servicios</a>
+                <a href="#equipo" class="block px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-DEFAULT rounded-lg">Equipo</a>
+                <a href="#contacto" class="block px-3 py-3 text-base font-medium text-brand-DEFAULT hover:bg-slate-50 rounded-lg">Contáctanos</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat overflow-hidden" style="background-image: url('img/ruta7lagosHERO.jpeg');">
+        <!-- Overlay oscuro para que el texto blanco resalte -->
+        <div class="absolute inset-0 bg-brand-dark/80 mix-blend-multiply"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent"></div>        
+        <!-- Abstract background elements -->
+        <div class="absolute inset-0 hero-pattern opacity-60"></div>
+        <div class="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-brand-DEFAULT rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+        <div class="absolute bottom-0 left-0 -mb-20 -ml-20 w-72 h-72 bg-emerald-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20">
+            <span class="block text-brand-accent font-semibold tracking-widest uppercase text-sm mb-6 fade-in-up">
+                Ambiente &mdash; Territorio &mdash; Información
+            </span>
+            <h1 class="text-5xl md:text-7xl font-light text-white leading-tight mb-8 tracking-tight fade-in-up delay-100">
+                Ciencia para decisiones <br class="hidden md:block" />
+                <span class="font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-teal-100">sostenibles.</span>
+            </h1>
+            <p class="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-slate-300 font-light mb-12 fade-in-up delay-200">
+                Acompañamos tus proyectos en la Patagonia integrando civilización, naturaleza y territorio con rigor científico y normativo.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 fade-in-up delay-300">
+                <a href="#contacto" class="bg-white text-brand-dark px-8 py-4 rounded-full font-medium hover:bg-slate-100 transition-colors shadow-lg">
+                    Iniciar un proyecto
+                </a>
+                <a href="#servicios" class="bg-transparent border border-white/30 text-white px-8 py-4 rounded-full font-medium hover:bg-white/10 transition-colors">
+                    Nuestros Servicios
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#nosotros" class="text-white/50 hover:text-white transition-colors">
+                <i class="fa-solid fa-arrow-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Nosotros Section -->
+    <section id="nosotros" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-brand-DEFAULT font-semibold tracking-wider uppercase text-sm mb-3">Quiénes Somos</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-brand-dark mb-6 leading-tight">
+                        Comprometidos con el desarrollo de la Patagonia.
+                    </h3>
+                    <p class="text-slate-600 text-lg mb-6 leading-relaxed">
+                        <strong>Marsh</strong> es una consultora ambiental y territorial con base en <span class="text-brand-dark font-medium">San Martín de los Andes, Neuquén</span>. Reunimos la experiencia de profesionales que investigamos, trabajamos y recorremos la Patagonia desde hace más de una década.
+                    </p>
+                    <p class="text-slate-600 text-lg mb-8 leading-relaxed">
+                        Nuestra misión es contribuir al desarrollo ambientalmente sostenible, ayudando a personas, emprendedores, empresas y organismos estatales a llevar adelante sus proyectos con información confiable y soluciones técnicamente viables, sustentadas en conocimiento científico.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6 pt-6 border-t border-slate-100">
+                        <div>
+                            <h4 class="font-bold text-brand-dark text-xl mb-2">Rigor Técnico</h4>
+                            <p class="text-sm text-slate-500">Aplicamos ciencia y evidencia para decisiones fundamentadas.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-brand-dark text-xl mb-2">Integridad</h4>
+                            <p class="text-sm text-slate-500">Actuamos con ética, transparencia y respeto por el entorno.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Abstract visual representation instead of a generic image to look more high-end -->
+                <div class="relative h-[500px] rounded-3xl overflow-hidden bg-slate-100 shadow-2xl flex items-center justify-center group">
+                    <img src="img/patagoniaLandscape.jpeg" alt="Paisaje Patagonia" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/80 to-transparent"></div>
+                    <div class="absolute bottom-10 left-10 right-10">
+                        <div class="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl">
+                            <p class="text-white font-medium text-lg italic">
+                                "Buscamos soluciones que compatibilicen el desarrollo con el cuidado del ambiente."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Section -->
+    <section id="servicios" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-brand-DEFAULT font-semibold tracking-wider uppercase text-sm mb-3">Cartera de Servicios</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-brand-dark mb-6">
+                    Soluciones interdisciplinarias integrales
+                </h3>
+                <p class="text-slate-600 text-lg">
+                    Brindamos estudios técnicos integrales para identificar, evaluar y gestionar los potenciales impactos ambientales de proyectos y actividades, en cumplimiento de la normativa vigente.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div data-drawer-id="eia" data-drawer-title="Evaluaciones de Impacto" class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-100 cursor-pointer group relative overflow-hidden">
+                    <div class="absolute top-4 right-4 text-slate-200 group-hover:text-brand-DEFAULT transition-colors opacity-50"><i class="fa-solid fa-arrow-right"></i></div>
+                    <div class="w-14 h-14 bg-emerald-50 text-brand-DEFAULT rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-DEFAULT group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-brand-dark mb-3">Evaluación de Impacto Ambiental</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-4">
+                        Identificación y valoración de impactos potenciales. Elaboración de Líneas de Base, medidas de mitigación y planes de gestión.
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div data-drawer-id="gis" data-drawer-title="Análisis Territorial (GIS)" class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-100 cursor-pointer group relative overflow-hidden">
+                    <div class="absolute top-4 right-4 text-slate-200 group-hover:text-brand-DEFAULT transition-colors opacity-50"><i class="fa-solid fa-arrow-right"></i></div>
+                    <div class="w-14 h-14 bg-emerald-50 text-brand-DEFAULT rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-DEFAULT group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-brand-dark mb-3">Análisis Territorial y Cartografía</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-4">
+                        Integración de imágenes satelitales y SIG para análisis espacial, evaluación de aptitud y modelado de riesgos naturales.
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div data-drawer-id="gestion" data-drawer-title="Gestión Ambiental" class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-100 cursor-pointer group relative overflow-hidden">
+                    <div class="absolute top-4 right-4 text-slate-200 group-hover:text-brand-DEFAULT transition-colors opacity-50"><i class="fa-solid fa-arrow-right"></i></div>
+                    <div class="w-14 h-14 bg-emerald-50 text-brand-DEFAULT rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-DEFAULT group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-brand-dark mb-3">Gestión Ambiental y Sostenibilidad</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-4">
+                        Evaluación del desempeño ambiental, eficiencia energética, gestión de residuos y estrategias de sostenibilidad organizacional.
+                    </p>
+                </div>
+
+                <!-- Service 4 -->
+                <div data-drawer-id="bio" data-drawer-title="Diversidad Biológica" class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-100 cursor-pointer group relative overflow-hidden">
+                    <div class="absolute top-4 right-4 text-slate-200 group-hover:text-brand-DEFAULT transition-colors opacity-50"><i class="fa-solid fa-arrow-right"></i></div>
+                    <div class="w-14 h-14 bg-emerald-50 text-brand-DEFAULT rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-DEFAULT group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-dna"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-brand-dark mb-3">Diversidad Biológica y Restauración</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-4">
+                        Inventarios de biodiversidad, monitoreo de fauna, protocolos de rescate, estudios genéticos y biorremediación.
+                    </p>
+                </div>
+                
+                <!-- Service 5 -->
+                <div data-drawer-id="control" data-drawer-title="Control, Manejo y Ordenamiento" class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-100 cursor-pointer group relative overflow-hidden">
+                    <div class="absolute top-4 right-4 text-slate-200 group-hover:text-brand-DEFAULT transition-colors opacity-50"><i class="fa-solid fa-arrow-right"></i></div>
+                    <div class="w-14 h-14 bg-emerald-50 text-brand-DEFAULT rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-DEFAULT group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-shield-virus"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-brand-dark mb-3">Control, Manejo y Ordenamiento</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-4">
+                        Planes para especies invasoras y plagas. Peritajes ambientales, asesoramiento normativo y ordenamiento territorial.
+                    </p>
+                </div>
+                
+                <!-- Service 6 (Highlight) -->
+                <div data-drawer-id="antecedentes" data-drawer-title="Nuestros Antecedentes" class="bg-brand-dark rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-800 cursor-pointer group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 -mt-10 -mr-10 w-32 h-32 bg-brand-DEFAULT rounded-full opacity-20 group-hover:scale-150 transition-transform duration-700"></div>
+                    <div class="absolute top-4 right-4 text-slate-600 group-hover:text-white transition-colors opacity-50"><i class="fa-solid fa-arrow-right"></i></div>
+                    <div class="w-14 h-14 bg-white/10 text-white rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-accent transition-colors">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Antecedentes y Experiencia</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Conocé nuestros proyectos realizados: manejo de fauna silvestre (guanacos), peritajes por incendios y protocolos de bienestar animal.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipo Section -->
+    <section id="equipo" class="py-24 bg-white border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-brand-DEFAULT font-semibold tracking-wider uppercase text-sm mb-3">Nuestro Equipo</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-brand-dark mb-6">
+                    Especialistas comprometidos
+                </h3>
+                <p class="text-slate-600 text-lg">
+                    Un enfoque regional y personalizado orientado a encontrar soluciones técnicas adaptadas a cada proyecto.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Team Member 1 -->
+                <div class="group text-center">
+                    <div class="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden bg-slate-200 border-4 border-white shadow-lg">
+                        <img src="img/RubenKalmbach.png" alt="Rubén Kalmbach" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h4 class="text-xl font-bold text-brand-dark mb-1">Rubén Kalmbach</h4>
+                    <p class="text-brand-DEFAULT text-sm font-medium mb-3">Licenciado en Geografía</p>
+                    <p class="text-slate-500 text-sm px-4">
+                        Diplomado en Gestión del Cambio Climático. Experto en movilidad sostenible, eficiencia energética y análisis de Sistemas de Información Geográfica (GIS).
+                    </p>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="group text-center">
+                    <div class="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden bg-slate-200 border-4 border-white shadow-lg">
+                        <img src="img/LeonardoLeggieri.png" alt="Leonardo Leggieri" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h4 class="text-xl font-bold text-brand-dark mb-1">Dr. Leonardo Leggieri</h4>
+                    <p class="text-brand-DEFAULT text-sm font-medium mb-3">Doctor en biología</p>
+                    <p class="text-slate-500 text-sm px-4">
+                        Investigador del CONICET. Especialista en biodiversidad, ciencia aplicada, manejo de fauna, monitoreo ambiental, SIG y genómica.
+                    </p>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="group text-center">
+                    <div class="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden bg-slate-200 border-4 border-white shadow-lg">
+                        <img src="img/MartinRomero.png" alt="Martín Romero" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h4 class="text-xl font-bold text-brand-dark mb-1">Martín Romero</h4>
+                    <p class="text-brand-DEFAULT text-sm font-medium mb-3">Licenciado en Antropología</p>
+                    <p class="text-slate-500 text-sm px-4">
+                        Ms Antropología Urbana. Experto en trabajo territorial, diagnósticos participativos, diseño de políticas públicas y evaluación de impactos socioculturales.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Drawers & Templates Container (Hidden by default) -->
+    <div id="drawer-overlay" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[60] hidden opacity-0 transition-opacity duration-300">
+        <div id="info-drawer" class="fixed inset-y-0 right-0 w-full max-w-md md:max-w-lg bg-white shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col">
+            
+            <!-- Drawer Header -->
+            <div class="flex items-center justify-between p-6 border-b border-slate-100 bg-slate-50">
+                <h3 id="drawer-title" class="text-2xl font-bold text-brand-dark">Título</h3>
+                <button id="close-drawer" class="text-slate-400 hover:text-brand-DEFAULT focus:outline-none bg-white w-10 h-10 rounded-full shadow-sm flex items-center justify-center border border-slate-200 transition-colors">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            
+            <!-- Drawer Content -->
+            <div id="drawer-content-area" class="p-8 overflow-y-auto flex-1 custom-scrollbar">
+                <!-- Content injected here via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- HTML TEMPLATES FOR DRAWERS -->
+    
+    <!-- Template EIA -->
+    <template id="tpl-eia">
+        <div class="space-y-6 text-slate-600 leading-relaxed">
+            <p>Formulamos, dirigimos, ejecutamos, auditamos y certificamos planes, programas y proyectos de estudios de impacto ambiental, proyectos de líneas de base, de prevención, control, corrección y mitigación de los efectos ocasionados por actividades de origen antrópico o por eventos naturales.</p>
+            <p>Diseñamos, dirigimos, ejecutamos y certificamos proyectos de turismo vinculados a las ciencias biológicas y sociales.</p>
+            
+            <div class="bg-emerald-50 rounded-2xl p-6 mt-8">
+                <h4 class="font-bold text-brand-dark text-lg mb-4"><i class="fa-solid fa-file-signature text-brand-DEFAULT mr-2"></i> Bases Necesarias para Proyectos</h4>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex items-start"><i class="fa-solid fa-check text-brand-accent mt-1 mr-3"></i> Informe Ambiental</li>
+                    <li class="flex items-start"><i class="fa-solid fa-check text-brand-accent mt-1 mr-3"></i> Evaluación de Impacto Ambiental y Social</li>
+                    <li class="flex items-start"><i class="fa-solid fa-check text-brand-accent mt-1 mr-3"></i> Línea de Base Ambiental</li>
+                    <li class="flex items-start"><i class="fa-solid fa-check text-brand-accent mt-1 mr-3"></i> Auditoría Ambiental e Informe Pericial</li>
+                    <li class="flex items-start"><i class="fa-solid fa-check text-brand-accent mt-1 mr-3"></i> Informe de sostenibilidad y sustentabilidad</li>
+                </ul>
+            </div>
+        </div>
+    </template>
+
+    <!-- Template GIS -->
+    <template id="tpl-gis">
+        <div class="space-y-6 text-slate-600 leading-relaxed">
+            <p>Integramos información proveniente de imágenes satelitales, Sistemas de Información Geográfica (SIG), cartografía digital y relevamientos de campo para analizar el territorio desde una perspectiva ambiental.</p>
+            <p>Procesamos imágenes de alta resolución y aplicamos herramientas de análisis espacial para:</p>
+            <ul class="list-disc pl-5 space-y-2 mt-4 marker:text-brand-DEFAULT">
+                <li>Elaborar mapas temáticos y evaluar aptitud territorial.</li>
+                <li>Modelar riesgos naturales.</li>
+                <li>Caracterizar coberturas y usos del suelo.</li>
+                <li>Identificar áreas de sensibilidad ambiental y corredores biológicos.</li>
+            </ul>
+            <p class="mt-6">Complementamos estos análisis con series temporales de información satelital, permitiendo monitorear cambios en la vegetación, incendios, disponibilidad hídrica y otras dinámicas ambientales, generando información objetiva para diagnósticos, peritajes y la planificación territorial.</p>
+        </div>
+    </template>
+
+    <!-- Template Gestion -->
+    <template id="tpl-gestion">
+        <div class="space-y-6 text-slate-600 leading-relaxed">
+            <p>Evaluamos el desempeño ambiental de proyectos, emprendimientos y organizaciones para identificar oportunidades de mejora, reducir impactos y fortalecer su sostenibilidad en el tiempo.</p>
+            <p>Integramos herramientas de análisis ambiental, eficiencia energética, gestión del cambio climático y evaluación del ciclo de vida para diseñar estrategias adaptadas a cada organización.</p>
+            <p><strong>Analizamos:</strong> consumos energéticos, emisiones de carbono, gestión de residuos, movilidad, uso de recursos y otras variables relevantes para cada actividad.</p>
+            
+            <div class="bg-slate-50 border-l-4 border-brand-DEFAULT p-4 mt-6">
+                <p class="text-sm font-medium text-slate-700">Elaboramos diagnósticos, planes de acción y recomendaciones técnicas que favorecen el cumplimiento normativo, la optimización de recursos, la incorporación de buenas prácticas y una gestión más eficiente.</p>
+            </div>
+        </div>
+    </template>
+
+    <!-- Template Biodiversidad -->
+    <template id="tpl-bio">
+        <div class="space-y-6 text-slate-600 leading-relaxed">
+            <h4 class="font-bold text-brand-dark text-lg border-b pb-2">Diversidad Biológica</h4>
+            <p>Identificamos, determinamos y evaluamos la diversidad biológica en sus diferentes niveles de organización, incluyendo flora, fauna y formas extintas, así como su dinámica e interrelaciones.</p>
+            <ul class="list-disc pl-5 space-y-2 mt-2 marker:text-brand-DEFAULT">
+                <li>Planificamos estrategias de conservación, manejo y uso sustentable.</li>
+                <li>Acciones para reintroducción de especies autóctonas.</li>
+                <li>Asesoramos áreas protegidas, zoológicos, jardines botánicos y museos.</li>
+                <li>Programas de educación ambiental y sanitaria.</li>
+            </ul>
+
+            <h4 class="font-bold text-brand-dark text-lg border-b pb-2 mt-8">Restauración y Mejoramiento</h4>
+            <p>Diagnosticamos, biomonitoreamos y diseñamos estrategias para biorremediar aire, aguas, aguas residuales, efluentes industriales, suelos y ecosistemas.</p>
+            
+            <h4 class="font-bold text-brand-dark text-lg border-b pb-2 mt-8">Servicios Especializados</h4>
+            <ul class="space-y-2 mt-2 text-sm bg-slate-50 p-4 rounded-xl">
+                <li class="flex items-start"><i class="fa-solid fa-arrow-right text-brand-DEFAULT mt-1 mr-2 text-xs"></i> Programas de monitoreo o manejo de fauna silvestre y ecosistemas.</li>
+                <li class="flex items-start"><i class="fa-solid fa-arrow-right text-brand-DEFAULT mt-1 mr-2 text-xs"></i> Protocolos de rescate y relocalización.</li>
+                <li class="flex items-start"><i class="fa-solid fa-arrow-right text-brand-DEFAULT mt-1 mr-2 text-xs"></i> Estudios genéticos de poblaciones y conectividad biológica.</li>
+            </ul>
+        </div>
+    </template>
+
+    <!-- Template Control -->
+    <template id="tpl-control">
+        <div class="space-y-6 text-slate-600 leading-relaxed">
+            <h4 class="font-bold text-brand-dark text-lg border-b pb-2">Control y Manejo</h4>
+            <p>Monitoreamos y formulamos planes estratégicos para la mitigación y el control biológico de plagas, vectores, reservorios de agentes de enfermedades, y especies exóticas invasoras.</p>
+            <p>Identificamos y controlamos organismos y virus que afecten la salud de los seres vivos, procesos de producción, y conservación del patrimonio cultural. Asesoramos en políticas para el control demográfico y epidemiológico.</p>
+
+            <h4 class="font-bold text-brand-dark text-lg border-b pb-2 mt-8">Ordenamiento y Justicia</h4>
+            <p>Programamos, ejecutamos y peritamos acciones relacionadas con el ordenamiento del territorio. Realizamos pericias y análisis forenses.</p>
+            <ul class="list-disc pl-5 space-y-2 mt-4 marker:text-brand-DEFAULT">
+                <li>Diseño de políticas tendientes a la conservación de la biodiversidad.</li>
+                <li>Auditorías, inspecciones y pericias en cuerpos legislativos y judiciales.</li>
+                <li>Dictámenes técnicos en organismos públicos y privados.</li>
+            </ul>
+        </div>
+    </template>
+
+    <!-- Template Antecedentes -->
+    <template id="tpl-antecedentes">
+        <div class="space-y-6 text-slate-600 leading-relaxed">
+            <p class="font-medium text-brand-dark">Conocé algunas de las organizaciones con las que hemos trabajado e investigaciones realizadas:</p>
+            
+            <div class="space-y-4 mt-6">
+                <!-- Case 1 -->
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    <h5 class="font-bold text-brand-DEFAULT text-sm mb-1">Manejo de Fauna Silvestre (Guanacos)</h5>
+                    <ul class="text-sm space-y-2 mt-2">
+                        <li><span class="font-medium">2018:</span> Bases biológicas para uso sostenible (Mendoza).</li>
+                        <li><span class="font-medium">2019-2023:</span> Conservación en Estancias La Alicantina y La Rosa (Chubut).</li>
+                        <li><span class="font-medium">2021-2022:</span> Manejo de guanacos silvestres (Dirección General de Fauna, Santa Cruz).</li>
+                        <li><span class="font-medium">2022:</span> Conservación genética (Tierra del Fuego).</li>
+                    </ul>
+                </div>
+                
+                <!-- Case 2 -->
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    <h5 class="font-bold text-brand-DEFAULT text-sm mb-1">Peritajes y Estudios Especiales</h5>
+                    <ul class="text-sm space-y-2 mt-2">
+                        <li><span class="font-medium">2022:</span> Análisis sobre Barros Crudos, Celda V SMA (Defensoría Penal NQN).</li>
+                        <li><span class="font-medium">2019:</span> Protocolo de Bienestar Animal en Perros de Trineo (Bosque de los Huskies).</li>
+                        <li><span class="font-medium">2017-2024:</span> Evaluación endocrinológica de mamíferos (CONICET).</li>
+                    </ul>
+                </div>
+
+                <!-- Case 3 -->
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    <h5 class="font-bold text-brand-DEFAULT text-sm mb-1">Territorio y Sociedad</h5>
+                    <ul class="text-sm space-y-2 mt-2">
+                        <li>Análisis de incendios forestales y vulnerabilidad vial (Chubut, 2026).</li>
+                        <li>Informes antropológicos indígenas (Gobierno del NQN, 2024-Actualidad).</li>
+                        <li>Formulación de programas sobre derechos de niñez (2021-2023).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Contact CTA Section -->
+    <section id="contacto" class="py-20 bg-brand-dark text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-10 md:p-16 flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-2/3 mb-8 md:mb-0 text-center md:text-left">
+                    <h2 class="text-3xl md:text-5xl font-light mb-4">¿Listo para concretar tu proyecto?</h2>
+                    <p class="text-slate-300 text-lg max-w-xl">
+                        Aportamos soluciones técnicas que favorecen la viabilidad de tu iniciativa, cumpliendo las exigencias ambientales.
+                    </p>
+                </div>
+                <div class="md:w-1/3 flex justify-center md:justify-end">
+                    <a href="mailto:marshambiente@gmail.com" class="bg-brand-accent hover:bg-emerald-400 text-brand-dark font-bold text-lg py-4 px-10 rounded-full transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(16,185,129,0.4)]">
+                        Escríbenos ahora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 pt-16 pb-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <!-- Brand -->
+                <div class="md:col-span-1">
+                    <a href="#" class="text-3xl font-bold text-white tracking-tighter mb-4 block">
+                        MARSH<span class="text-brand-accent">.</span>
+                    </a>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        Ambiente - Territorio - Información.<br>
+                        Ciencia para decisiones sostenibles en la Patagonia y el país.
+                    </p>
+                </div>
+
+                <!-- Links -->
+                <div class="md:col-span-1">
+                    <h4 class="text-white font-semibold mb-4 uppercase text-sm tracking-wider">Enlaces</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#inicio" class="text-slate-400 hover:text-white transition-colors text-sm">Inicio</a></li>
+                        <li><a href="#nosotros" class="text-slate-400 hover:text-white transition-colors text-sm">Quiénes Somos</a></li>
+                        <li><a href="#servicios" class="text-slate-400 hover:text-white transition-colors text-sm">Servicios</a></li>
+                        <li><a href="#equipo" class="text-slate-400 hover:text-white transition-colors text-sm">Nuestro Equipo</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="md:col-span-2">
+                    <h4 class="text-white font-semibold mb-4 uppercase text-sm tracking-wider">Contacto</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-location-dot mt-1 mr-3 text-brand-accent"></i>
+                            <span class="text-slate-400 text-sm">San Martín de los Andes,<br>Neuquén, Patagonia Argentina.</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-envelope mr-3 text-brand-accent"></i>
+                            <a href="mailto:marshambiente@gmail.com" class="text-slate-400 hover:text-white transition-colors text-sm">marshambiente@gmail.com</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-phone mr-3 text-brand-accent"></i>
+                            <a href="tel:+542972472280" class="text-slate-400 hover:text-white transition-colors text-sm">(+54) 2972-472280</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Registrations & Copyright -->
+            <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="text-xs text-slate-500 font-mono tracking-tight text-center md:text-left space-y-1">
+                    <p>SERVICIO TECNOLÓGICO DE ALTO NIVEL CONICET N° 7789</p>
+                    <p>REGISTRO DE CONSULTORES AMBIENTALES N° 80 | MATRÍCULA N° G426</p>
+                </div>
+                <div class="text-slate-500 text-sm">
+                    &copy; 2024 Marsh Consultora. Todos los derechos reservados.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Mobile Menu Toggle ---
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const icon = btn.querySelector('i');
+
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                if(menu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                }
+            });
+
+            // Close mobile menu on click link
+            const mobileLinks = menu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                });
+            });
+
+            // --- Navbar background change on scroll ---
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 20) {
+                    navbar.classList.add('shadow-md');
+                    navbar.classList.replace('bg-white/90', 'bg-white/95');
+                } else {
+                    navbar.classList.remove('shadow-md');
+                    navbar.classList.replace('bg-white/95', 'bg-white/90');
+                }
+            });
+
+            // --- Slide-in Drawer Logic ---
+            const drawer = document.getElementById('info-drawer');
+            const drawerOverlay = document.getElementById('drawer-overlay');
+            const drawerContentArea = document.getElementById('drawer-content-area');
+            const drawerTitle = document.getElementById('drawer-title');
+            const closeBtn = document.getElementById('close-drawer');
+
+            // Open Drawer Function
+            const openDrawer = (id, title) => {
+                const template = document.getElementById(`tpl-${id}`);
+                if (!template) return;
+                
+                // Inject Content
+                drawerTitle.textContent = title;
+                drawerContentArea.innerHTML = template.innerHTML;
+                
+                // Animate In
+                drawerOverlay.classList.remove('hidden');
+                // Small delay to allow display block to apply before animating opacity
+                setTimeout(() => {
+                    drawerOverlay.classList.remove('opacity-0');
+                    drawer.classList.remove('translate-x-full');
+                }, 10);
+                
+                // Lock body scroll
+                document.body.style.overflow = 'hidden';
+            };
+
+            // Close Drawer Function
+            const closeDrawerFn = () => {
+                drawer.classList.add('translate-x-full');
+                drawerOverlay.classList.add('opacity-0');
+                setTimeout(() => {
+                    drawerOverlay.classList.add('hidden');
+                    drawerContentArea.innerHTML = ''; // Clean up
+                }, 300); // Matches transition duration
+                
+                // Restore body scroll
+                document.body.style.overflow = '';
+            };
+
+            // Attach listeners to trigger cards
+            const drawerTriggers = document.querySelectorAll('[data-drawer-id]');
+            drawerTriggers.forEach(trigger => {
+                trigger.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const id = trigger.getAttribute('data-drawer-id');
+                    const title = trigger.getAttribute('data-drawer-title');
+                    openDrawer(id, title);
+                });
+            });
+
+            // Attach listeners to close actions
+            closeBtn.addEventListener('click', closeDrawerFn);
+            drawerOverlay.addEventListener('click', (e) => {
+                if(e.target === drawerOverlay) closeDrawerFn();
+            });
+            
+            // Close with Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !drawerOverlay.classList.contains('hidden')) {
+                    closeDrawerFn();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
