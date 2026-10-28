@@ -26,10 +26,10 @@
                     },
                     colors: {
                         brand: {
-                            light: '#e2e8f0', // slate-200
-                            DEFAULT: '#0f766e', // teal-700
-                            dark: '#0f172a', // slate-900
-                            accent: '#10b981', // emerald-500
+                            light: '#f1f5f9', // slate-100 (fondos muy sutiles y limpios)
+                            DEFAULT: '#1e3a8a', // blue-900 (azul corporativo profundo, transmite seriedad y ciencia)
+                            dark: '#0f172a', // slate-900 (casi negro, para máximo contraste y elegancia)
+                            accent: '#059669', // emerald-600 (verde profesional, sobrio, para resaltar la ecología)
                         }
                     }
                 }
@@ -115,12 +115,12 @@
     <!-- Hero Section -->
     <section id="inicio" class="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat overflow-hidden" style="background-image: url('img/ruta7lagosHERO.jpeg');">
         <!-- Overlay oscuro para que el texto blanco resalte -->
-        <div class="absolute inset-0 bg-brand-dark/80 mix-blend-multiply"></div>
+        <div class="absolute inset-0 bg-brand-dark/90 mix-blend-multiply"></div>
         <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent"></div>        
         <!-- Abstract background elements -->
         <div class="absolute inset-0 hero-pattern opacity-60"></div>
-        <div class="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-brand-DEFAULT rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
-        <div class="absolute bottom-0 left-0 -mb-20 -ml-20 w-72 h-72 bg-emerald-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+        <div class="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-brand-DEFAULT rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
+        <div class="absolute bottom-0 left-0 -mb-20 -ml-20 w-72 h-72 bg-brand-accent rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
 
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20">
             <span class="block text-brand-accent font-semibold tracking-widest uppercase text-sm mb-6 fade-in-up">
@@ -128,7 +128,7 @@
             </span>
             <h1 class="text-5xl md:text-7xl font-light text-white leading-tight mb-8 tracking-tight fade-in-up delay-100">
                 Ciencia para decisiones <br class="hidden md:block" />
-                <span class="font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-teal-100">sostenibles.</span>
+                <span class="font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-brand-light">sostenibles.</span>
             </h1>
             <p class="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-slate-300 font-light mb-12 fade-in-up delay-200">
                 Acompañamos tus proyectos en la Patagonia integrando civilización, naturaleza y territorio con rigor científico y normativo.
@@ -212,7 +212,7 @@
                 <!-- Service 1 -->
                 <div data-drawer-id="eia" data-drawer-title="Evaluaciones de Impacto" class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-100 cursor-pointer group relative overflow-hidden">
                     <div class="absolute top-4 right-4 text-slate-200 group-hover:text-brand-DEFAULT transition-colors opacity-50"><i class="fa-solid fa-arrow-right"></i></div>
-                    <div class="w-14 h-14 bg-emerald-50 text-brand-DEFAULT rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-DEFAULT group-hover:text-white transition-colors">
+                    <div class="w-14 h-14 bg-brand-accent/10 text-brand-DEFAULT rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-DEFAULT group-hover:text-white transition-colors">
                         <i class="fa-solid fa-leaf"></i>
                     </div>
                     <h4 class="text-xl font-bold text-brand-dark mb-3">Evaluación de Impacto Ambiental</h4>
@@ -224,7 +224,7 @@
                 <!-- Service 2 -->
                 <div data-drawer-id="gis" data-drawer-title="Análisis Territorial (GIS)" class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-100 cursor-pointer group relative overflow-hidden">
                     <div class="absolute top-4 right-4 text-slate-200 group-hover:text-brand-DEFAULT transition-colors opacity-50"><i class="fa-solid fa-arrow-right"></i></div>
-                    <div class="w-14 h-14 bg-emerald-50 text-brand-DEFAULT rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-DEFAULT group-hover:text-white transition-colors">
+                    <div class="w-14 h-14 bg-brand-accent/10 text-brand-DEFAULT rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-DEFAULT group-hover:text-white transition-colors">
                         <i class="fa-solid fa-map-location-dot"></i>
                     </div>
                     <h4 class="text-xl font-bold text-brand-dark mb-3">Análisis Territorial y Cartografía</h4>
@@ -236,7 +236,7 @@
                 <!-- Service 3 -->
                 <div data-drawer-id="gestion" data-drawer-title="Gestión Ambiental" class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-100 cursor-pointer group relative overflow-hidden">
                     <div class="absolute top-4 right-4 text-slate-200 group-hover:text-brand-DEFAULT transition-colors opacity-50"><i class="fa-solid fa-arrow-right"></i></div>
-                    <div class="w-14 h-14 bg-emerald-50 text-brand-DEFAULT rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-DEFAULT group-hover:text-white transition-colors">
+                    <div class="w-14 h-14 bg-brand-accent/10 text-brand-DEFAULT rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-DEFAULT group-hover:text-white transition-colors">
                         <i class="fa-solid fa-chart-line"></i>
                     </div>
                     <h4 class="text-xl font-bold text-brand-dark mb-3">Gestión Ambiental y Sostenibilidad</h4>
@@ -248,7 +248,7 @@
                 <!-- Service 4 -->
                 <div data-drawer-id="bio" data-drawer-title="Diversidad Biológica" class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-100 cursor-pointer group relative overflow-hidden">
                     <div class="absolute top-4 right-4 text-slate-200 group-hover:text-brand-DEFAULT transition-colors opacity-50"><i class="fa-solid fa-arrow-right"></i></div>
-                    <div class="w-14 h-14 bg-emerald-50 text-brand-DEFAULT rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-DEFAULT group-hover:text-white transition-colors">
+                    <div class="w-14 h-14 bg-brand-accent/10 text-brand-DEFAULT rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-DEFAULT group-hover:text-white transition-colors">
                         <i class="fa-solid fa-dna"></i>
                     </div>
                     <h4 class="text-xl font-bold text-brand-dark mb-3">Diversidad Biológica y Restauración</h4>
@@ -260,7 +260,7 @@
                 <!-- Service 5 -->
                 <div data-drawer-id="control" data-drawer-title="Control, Manejo y Ordenamiento" class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-100 cursor-pointer group relative overflow-hidden">
                     <div class="absolute top-4 right-4 text-slate-200 group-hover:text-brand-DEFAULT transition-colors opacity-50"><i class="fa-solid fa-arrow-right"></i></div>
-                    <div class="w-14 h-14 bg-emerald-50 text-brand-DEFAULT rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-DEFAULT group-hover:text-white transition-colors">
+                    <div class="w-14 h-14 bg-brand-accent/10 text-brand-DEFAULT rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-DEFAULT group-hover:text-white transition-colors">
                         <i class="fa-solid fa-shield-virus"></i>
                     </div>
                     <h4 class="text-xl font-bold text-brand-dark mb-3">Control, Manejo y Ordenamiento</h4>
@@ -301,7 +301,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                 <!-- Team Member 1 -->
                 <div class="group text-center">
-                    <div class="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden bg-slate-200 border-4 border-white shadow-lg">
+                    <div class="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden bg-brand-light border-4 border-white shadow-lg">
                         <img src="img/RubenKalmbach.png" alt="Rubén Kalmbach" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <h4 class="text-xl font-bold text-brand-dark mb-1">Rubén Kalmbach</h4>
@@ -313,7 +313,7 @@
 
                 <!-- Team Member 2 -->
                 <div class="group text-center">
-                    <div class="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden bg-slate-200 border-4 border-white shadow-lg">
+                    <div class="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden bg-brand-light border-4 border-white shadow-lg">
                         <img src="img/LeonardoLeggieri.png" alt="Leonardo Leggieri" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <h4 class="text-xl font-bold text-brand-dark mb-1">Dr. Leonardo Leggieri</h4>
@@ -325,7 +325,7 @@
 
                 <!-- Team Member 3 -->
                 <div class="group text-center">
-                    <div class="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden bg-slate-200 border-4 border-white shadow-lg">
+                    <div class="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden bg-brand-light border-4 border-white shadow-lg">
                         <img src="img/MartinRomero.png" alt="Martín Romero" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <h4 class="text-xl font-bold text-brand-dark mb-1">Martín Romero</h4>
@@ -365,7 +365,7 @@
             <p>Formulamos, dirigimos, ejecutamos, auditamos y certificamos planes, programas y proyectos de estudios de impacto ambiental, proyectos de líneas de base, de prevención, control, corrección y mitigación de los efectos ocasionados por actividades de origen antrópico o por eventos naturales.</p>
             <p>Diseñamos, dirigimos, ejecutamos y certificamos proyectos de turismo vinculados a las ciencias biológicas y sociales.</p>
             
-            <div class="bg-emerald-50 rounded-2xl p-6 mt-8">
+            <div class="bg-brand-accent/10 rounded-2xl p-6 mt-8">
                 <h4 class="font-bold text-brand-dark text-lg mb-4"><i class="fa-solid fa-file-signature text-brand-DEFAULT mr-2"></i> Bases Necesarias para Proyectos</h4>
                 <ul class="space-y-3 text-sm">
                     <li class="flex items-start"><i class="fa-solid fa-check text-brand-accent mt-1 mr-3"></i> Informe Ambiental</li>
@@ -499,7 +499,7 @@
                     </p>
                 </div>
                 <div class="md:w-1/3 flex justify-center md:justify-end">
-                    <a href="mailto:marshambiente@gmail.com" class="bg-brand-accent hover:bg-emerald-400 text-brand-dark font-bold text-lg py-4 px-10 rounded-full transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(16,185,129,0.4)]">
+                    <a href="mailto:marshambiente@gmail.com" class="bg-brand-accent hover:bg-brand-accent/80 text-white font-bold text-lg py-4 px-10 rounded-full transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(5,150,105,0.4)]">
                         Escríbenos ahora
                     </a>
                 </div>
